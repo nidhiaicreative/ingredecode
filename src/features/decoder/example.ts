@@ -1,0 +1,1 @@
+export const EXAMPLE_INGREDIENTS = `Water, sugar, refined wheat flour, edible vegetable oil (palm), milk solids, cocoa solids, invert syrup, emulsifiers (INS 322, INS 471), raising agents (INS 500(ii), INS 503(ii)), iodised salt, natural and artificial flavours, preservative (INS 202), colour (E150d).`;
