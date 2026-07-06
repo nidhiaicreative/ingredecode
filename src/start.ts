@@ -1,7 +1,7 @@
 import { createStart, createMiddleware } from "@tanstack/react-start";
 
 import "@fontsource/instrument-serif/400.css";
-import "@fontsource-variable/inter";
+import "@fontsource-variable/inter/index.css";
 
 import { renderErrorPage } from "./lib/error-page";
 
