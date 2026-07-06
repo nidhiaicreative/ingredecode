@@ -2,7 +2,8 @@ type Props = { summary: string };
 
 export function OverallSummary({ summary }: Props) {
   return (
-    <div className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-quiet)]">
+    <div className="relative overflow-hidden rounded-[var(--radius-card)] border border-border bg-card p-6 shadow-[var(--shadow-soft)]">
+      <div className="absolute inset-x-0 top-0 h-0.5 bg-primary/40" aria-hidden />
       <span className="text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground">
         Summary
       </span>
