@@ -47,10 +47,11 @@ export function HealthMeter({ score, category }: Props) {
           Health meter
         </span>
         <span
-          className={cn("font-serif text-5xl leading-none", meta.tone)}
+          className={cn("font-serif leading-none", meta.tone)}
           style={{ filter: "drop-shadow(var(--shadow-pop))" }}
         >
-          {pct}
+          <span className="text-5xl">{pct}</span>
+          <span className="ml-1 text-2xl text-muted-foreground">/100</span>
         </span>
       </div>
       <div className="mt-5 h-3 w-full overflow-hidden rounded-full bg-muted/70 shadow-inner">

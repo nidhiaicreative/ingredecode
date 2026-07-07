@@ -65,7 +65,7 @@ export function IngredientCard({
       <dl className="mt-4 space-y-3 text-sm">
         <div>
           <dt className="text-xs uppercase tracking-wider text-muted-foreground">
-            Purpose
+            Why added?
           </dt>
           <dd className="mt-0.5 leading-relaxed text-foreground">{purpose}</dd>
         </div>

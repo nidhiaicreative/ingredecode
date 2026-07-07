@@ -7,7 +7,7 @@ export function FlaggedIngredients({ items }: Props) {
   return (
     <div className="rounded-[var(--radius-card)] border border-border bg-card p-6 shadow-[var(--shadow-soft)]">
       <span className="text-xs font-medium uppercase tracking-[0.14em] text-muted-foreground">
-        Worth a closer look
+        Ingredients Worth Understanding
       </span>
       <ul className="mt-3 flex flex-wrap gap-2">
         {items.map((item) => (
