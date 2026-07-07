@@ -77,13 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "IngreDecode" },
-      { name: "description", content: "Decode any ingredient label into clear, evidence-based language." },
+      { title: "IngreDecode — Know what's inside, before it's inside you" },
+      { name: "description", content: "Paste any ingredient list — food, skincare, or medicine — and get a calm, scientifically accurate, plain-language breakdown in English or Hinglish." },
       { name: "author", content: "IngreDecode" },
-      { property: "og:title", content: "IngreDecode" },
-      { property: "og:description", content: "Decode any ingredient label into clear, evidence-based language." },
+      { property: "og:title", content: "IngreDecode — Know what's inside, before it's inside you" },
+      { property: "og:description", content: "Paste any ingredient list — food, skincare, or medicine — and get a calm, scientifically accurate, plain-language breakdown in English or Hinglish." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "IngreDecode — Know what's inside, before it's inside you" },
+      { name: "twitter:description", content: "Paste any ingredient list — food, skincare, or medicine — and get a calm, scientifically accurate, plain-language breakdown in English or Hinglish." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d89ac062-9194-48c3-bd75-71fc408d713b/id-preview-58456bcb--6f2da66a-63c7-402f-b85b-51de0ee050d8.lovable.app-1783416406492.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d89ac062-9194-48c3-bd75-71fc408d713b/id-preview-58456bcb--6f2da66a-63c7-402f-b85b-51de0ee050d8.lovable.app-1783416406492.png" },
     ],
     links: [
       {
