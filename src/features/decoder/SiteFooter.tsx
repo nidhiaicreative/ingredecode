@@ -14,6 +14,9 @@ export function SiteFooter() {
         dermatological advice. When in doubt, ask a qualified professional.
       </p>
       <p className="mt-6 text-xs">&copy; {new Date().getFullYear()} IngreDecode</p>
+      <p className="mt-2 text-center text-xs text-muted-foreground/70">
+        Version 0.1 &bull; Built during the Mesh API Hackathon
+      </p>
     </footer>
   );
 }
