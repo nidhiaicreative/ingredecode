@@ -6,8 +6,11 @@ export const productTypeEnum = z.enum(["food", "skincare", "medicine"]);
 export const categoryEnum = z.enum(["safe", "moderate", "caution", "avoid"]);
 export const evidenceEnum = z.enum(["strong", "moderate", "limited", "unclear"]);
 
+export const kitchenFamiliarityEnum = z.enum(["common_kitchen", "processed"]);
+
 export const decodeResultSchema = z.object({
   overall_summary: z.string(),
+  buying_recommendation: z.string().optional().default(""),
   health_meter: z.object({
     score: z.number().min(0).max(100),
     category: categoryEnum,
@@ -20,6 +23,7 @@ export const decodeResultSchema = z.object({
       purpose: z.string(),
       safety_note: z.string(),
       evidence_level: evidenceEnum,
+      kitchen_familiarity: kitchenFamiliarityEnum.optional().default("processed"),
     }),
   ),
   plain_language_explanation: z.string(),
