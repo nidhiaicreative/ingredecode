@@ -1,3 +1,4 @@
+import { GrandmaTest } from "./GrandmaTest";
 import { OverallSummary } from "./OverallSummary";
 import { HealthMeter } from "./HealthMeter";
 import { FlaggedIngredients } from "./FlaggedIngredients";
@@ -25,10 +26,16 @@ function Reveal({
 }
 
 export function ResultsView({ data }: Props) {
+  const productType = data.mode_used.product_type;
+  const isFood = productType === "food";
+
   return (
     <div className="space-y-6 sm:space-y-8">
       <Reveal delay={0}>
-        <OverallSummary summary={data.overall_summary} />
+        <OverallSummary
+          summary={data.overall_summary}
+          recommendation={data.buying_recommendation}
+        />
       </Reveal>
       <Reveal delay={80}>
         <HealthMeter
@@ -36,6 +43,11 @@ export function ResultsView({ data }: Props) {
           category={data.health_meter.category}
         />
       </Reveal>
+      {isFood ? (
+        <Reveal delay={120}>
+          <GrandmaTest items={data.ingredients} />
+        </Reveal>
+      ) : null}
       <Reveal delay={160}>
         <FlaggedIngredients items={data.flagged_ingredients} />
       </Reveal>
@@ -43,7 +55,10 @@ export function ResultsView({ data }: Props) {
         <IngredientList items={data.ingredients} />
       </Reveal>
       <Reveal delay={320}>
-        <PlainLanguageExplanation text={data.plain_language_explanation} />
+        <PlainLanguageExplanation
+          text={data.plain_language_explanation}
+          productType={productType}
+        />
       </Reveal>
     </div>
   );
