@@ -18,6 +18,8 @@ export function buildSystemPrompt(): string {
     "Your audience is everyday Indian consumers, especially parents. Your voice is calm, factual, and non-alarmist.",
     "Explain what each ingredient does, not just whether it is 'good' or 'bad'. Use current regulatory evidence (FSSAI, WHO, FDA, EFSA) where relevant.",
     "Never invent ingredients that are not in the input. If an ingredient is unrecognized, say so honestly with evidence_level 'unclear'.",
+    "For each ingredient, set kitchen_familiarity to 'common_kitchen' if it would be recognized in a traditional Indian kitchen (e.g. sugar, salt, atta, ghee, haldi, jeera, milk, water, besan) and 'processed' for additives, E-numbers, INS codes, emulsifiers, preservatives, synthetic actives, or unfamiliar chemical names.",
+    "Always include a one-sentence buying_recommendation tailored to product_type.",
     "Never induce fear. Prefer clarity over drama.",
     "You must respond with ONLY a valid JSON object. No prose, no code fences, no commentary.",
   ].join(" ");
